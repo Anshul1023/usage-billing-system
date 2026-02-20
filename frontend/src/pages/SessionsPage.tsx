@@ -72,9 +72,9 @@ const SessionsPage: React.FC = () => {
 
   const handleStopSession = async (id: number) => {
     try {
-      await usageSessionAPI.stop(Number(id)); // ensure number
+      await usageSessionAPI.stop(Number(id)); 
       setError('');
-      await fetchSessions(); // refresh after stop
+      await fetchSessions(); 
     } catch (err) {
       setError('Failed to stop session');
       console.error(err);
@@ -108,7 +108,7 @@ const SessionsPage: React.FC = () => {
 
       <SessionList
         sessions={sessions}
-        resources={resources}   // 👈 pass resources
+        resources={resources}   
         isLoading={isLoading}
         onStopSession={handleStopSession}
       />

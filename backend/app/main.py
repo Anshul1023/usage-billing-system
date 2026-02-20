@@ -21,7 +21,7 @@ app.add_middleware(
 def startup():
     Base.metadata.create_all(bind=engine)
 
-app.include_router(router)   # 👈 MUST BE ACTIVE
+app.include_router(router)   
 
 
 @app.get("/health")

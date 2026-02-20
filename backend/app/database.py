@@ -10,7 +10,7 @@ DATABASE_URL = os.getenv(
     "sqlite:///./usage_billing.db"
 )
 
-# For SQLite, we need special configuration
+
 if DATABASE_URL.startswith("sqlite"):
     engine = create_engine(
         DATABASE_URL,

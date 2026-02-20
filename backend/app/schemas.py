@@ -24,7 +24,7 @@ class ResourceResponse(BaseModel):
     capacity: int
     price_per_minute: float
     created_at: datetime
-    updated_at: Optional[datetime] = None   # FIXED HERE
+    updated_at: Optional[datetime] = None   
 
     class Config:
         from_attributes = True
